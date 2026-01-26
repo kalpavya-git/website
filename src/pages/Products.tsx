@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
 import { products, categories } from "@/data/products";
 import { Button } from "@/components/ui/button";
 
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const [selectedCategory, setSelectedCategory] = useState(categoryParam || "All");
+
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [categoryParam]);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    if (category === "All") {
+      searchParams.delete("category");
+    } else {
+      searchParams.set("category", category);
+    }
+    setSearchParams(searchParams);
+  };
 
   const filteredProducts = selectedCategory === "All"
     ? products
@@ -23,7 +42,7 @@ const Products = () => {
             Herbal Products
           </h1>
           <p className="font-serif text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Discover our range of authentic Ayurvedic supplements, each crafted with 
+            Discover our range of authentic Ayurvedic supplements, each crafted with
             care following time-honored traditions and the highest quality standards.
           </p>
         </div>
@@ -38,12 +57,11 @@ const Products = () => {
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className={`font-sans ${
-                  selectedCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "border-border hover:border-primary hover:text-primary"
-                }`}
+                onClick={() => handleCategoryChange(category)}
+                className={`font-sans ${selectedCategory === category
+                  ? "bg-primary text-primary-foreground"
+                  : "border-border hover:border-primary hover:text-primary"
+                  }`}
               >
                 {category}
               </Button>

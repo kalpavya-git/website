@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/logo.webp";
 
 const Footer = () => {
@@ -75,11 +75,31 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 opacity-80">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+91 8929290209</span>
+                <span>+91-9211895324</span>
               </li>
               <li className="flex items-center gap-3 opacity-80">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>sales@kalpavyaayurveda.com</span></li>
+                <span>support@kalpavyaayurveda.com</span></li>
+              <li className="flex items-center gap-4 mt-2">
+                <a
+                  href="https://www.instagram.com/kalpavyaayurveda/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61585310939756"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>

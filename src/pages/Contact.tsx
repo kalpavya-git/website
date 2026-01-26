@@ -21,14 +21,14 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const text = `Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone || 'Not provided'}%0AMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/918929290209?text=${text}`; // Encoding happens via browser, but manual encoding is safer for complex chars, let's use encodeURIComponent for fields if needed, but simple template string usually works. To be safe, let's use encodeURIComponent.
+    const whatsappUrl = `https://wa.me/919211895324?text=${text}`; // Encoding happens via browser, but manual encoding is safer for complex chars, let's use encodeURIComponent for fields if needed, but simple template string usually works. To be safe, let's use encodeURIComponent.
 
     // Better implementation with encodeURIComponent
     const encodedText = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nMessage: ${formData.message}`
     );
 
-    window.open(`https://wa.me/918929290209?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/919211895324?text=${encodedText}`, '_blank');
 
     toast({
       title: "Opening WhatsApp",
@@ -50,14 +50,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 8929290209",
-      href: "tel:+918929290209",
+      value: "+91-9211895324",
+      href: "tel:+919211895324",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "sales@Kalpavyaayurveda.com",
-      href: "mailto:sales@Kalpavyaayurveda.com",
+      value: "support@kalpavyaayurveda.com",
+      href: "mailto:support@kalpavyaayurveda.com",
     },
     {
       icon: MapPin,
@@ -211,7 +211,7 @@ const Contact = () => {
                 </p>
                 <Button asChild className="font-sans w-full sm:w-auto">
                   <a
-                    href="https://wa.me/918929290209"
+                    href="https://wa.me/919211895324"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

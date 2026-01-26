@@ -4,6 +4,7 @@ import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Phone, Check } from "lucide-react";
+import RichProductContent from "@/components/RichProductContent";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -118,7 +119,7 @@ const ProductDetail = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="font-sans bg-primary hover:bg-primary/90">
                   <a
-                    href={`https://wa.me/918929290209?text=${encodeURIComponent(`Hi, I'm interested in ${product.name}.`)}`}
+                    href={`https://wa.me/919211895324?text=${encodeURIComponent(`Hi, I'm interested in ${product.name}.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -136,6 +137,9 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Rich Product Content */}
+      {product.richContent && <RichProductContent content={product.richContent} />}
 
       {/* Back Button */}
       <section className="pb-16">

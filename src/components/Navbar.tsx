@@ -10,59 +10,57 @@ const Navbar = () => {
 
   const navLinks = [
     { path: "/", label: "Home" },
-    { path: "/products", label: "Products" },
+    { path: "/products", label: "All Products" },
+    { path: "/products?category=Combos", label: "Combos" },
+    { path: "/products?category=Kidney%20Care", label: "Kidney Care" },
+    { path: "/products?category=Digestive", label: "Digestion" },
     { path: "/about", label: "About Us" },
     { path: "/contact", label: "Contact" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path.includes('?')) {
+      return location.pathname + location.search === path;
+    }
+    return location.pathname === path && location.search === '';
+  };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white shadow-md border-b border-gray-200 h-20">
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex items-center h-full">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
-            <img src={logo} alt="Kalpavya Ayurveda" className="h-16 w-auto transition-transform group-hover:scale-105" />
-            {/* <div className="flex flex-col">
-              <span className="font-display text-xl font-semibold text-primary tracking-wide">
-                Kalpavya
-              </span>
-              <span className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase -mt-1">
-                Ayurveda
-              </span>
-            </div> */}
+          <Link to="/" className="flex items-center gap-2 mr-8">
+            <img src={logo} alt="Kalpavya" className="h-12 w-auto" />
+            <span className="font-display text-xl font-bold text-black tracking-wide hidden sm:block">
+              Kalpavya
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative font-sans text-sm tracking-wide transition-colors hover:text-primary ${isActive(link.path)
-                  ? "text-primary font-medium"
-                  : "text-foreground/80"
+                className={`text-sm font-medium transition-colors hover:text-primary ${isActive(link.path) ? "text-primary font-bold" : "text-black"
                   }`}
               >
                 {link.label}
-                {isActive(link.path) && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full" />
-                )}
               </Link>
             ))}
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button asChild className="bg-primary hover:bg-primary/90 font-sans">
+          <div className="hidden md:block ml-auto">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white">
               <Link to="/contact">Inquire Now</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden ml-auto p-2 text-black"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -70,29 +68,23 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Dropdown */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`font-sans text-base py-2 transition-colors ${isActive(link.path)
-                    ? "text-primary font-medium"
-                    : "text-foreground/80"
-                    }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Button asChild className="mt-2 bg-primary hover:bg-primary/90 font-sans">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Inquire Now
-                </Link>
-              </Button>
-            </div>
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-gray-200 shadow-lg p-4 flex flex-col gap-4 animate-in slide-in-from-top-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={`px-4 py-2 text-lg font-medium rounded-md hover:bg-gray-50 ${isActive(link.path) ? "text-primary bg-primary/5" : "text-black"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Button asChild className="w-full bg-primary text-white mt-2">
+              <Link to="/contact" onClick={() => setIsOpen(false)}>Inquire Now</Link>
+            </Button>
           </div>
         )}
       </div>
