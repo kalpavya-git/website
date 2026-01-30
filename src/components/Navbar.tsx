@@ -9,7 +9,6 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { path: "/", label: "Home" },
     { path: "/products", label: "All Products" },
     { path: "/products?category=Combos", label: "Combos" },
     { path: "/products?category=Kidney%20Care", label: "Kidney Care" },
