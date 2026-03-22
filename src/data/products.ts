@@ -5,6 +5,9 @@ import pittaCareImg from "@/assets/kalpavya-pitta-care-plus-300ml.webp";
 import liverCapImg from "@/assets/kalpavya-liver-cap-60.webp";
 import kidneyStoneComboImg from "@/assets/stonekalp-nitya-kidneystone-combo.webp";
 import liverPittaComboImg from "@/assets/livercare-pittacare-nitya-combo.webp";
+import manvigorImg from "@/assets/manvigor-plus.png";
+import amlivdsImg from "@/assets/am-liv-ds.png";
+import leucareImg from "@/assets/leucare-plus.png";
 
 export interface Product {
   id: string;
@@ -816,6 +819,274 @@ export const products: Product[] = [
         }
       }
     }
+  },
+  {
+    id: "manvigor-plus",
+    name: "ManVigor Plus",
+    description: "Premium wellness and vitality supplement for men.",
+    longDescription: "A comprehensive formulation to support men's health, energy, and overall vitality.",
+    price: "₹2500",
+    category: "Wellness",
+    ingredients: [],
+    benefits: ["Supports energy and stamina", "Promotes overall vitality"],
+    usage: "Take as directed by your healthcare professional.",
+    image: manvigorImg,
+    richContent: {
+      problemSection: {
+        title: "थकान, कमजोरी और ऊर्जा की कमी?",
+        description: "आज की भागदौड़ भरी जिंदगी में तनाव और काम के दबाव से शारीरिक कमजोरी और थकान एक आम समस्या बन गई है।",
+        problems: [
+          { title: "Low Energy", description: "दिन भर थकान महसूस होना", icon: "battery-low" },
+          { title: "Stress Levels", description: "मानसिक तनाव और चिंता", icon: "frown" },
+          { title: "Physical Weakness", description: "काम में मन न लगना और स्टैमिना की कमी", icon: "alert-circle" },
+          { title: "Joint & Muscle Pain", description: "शारीरिक दर्द और सुस्ती", icon: "activity" }
+        ],
+        problemImage: "/images/generated/manvigor-problem.png"
+      },
+      solutionSection: {
+        title: "ManVigor Plus",
+        subTitle: "शक्ति और ऊर्जा का प्राकृतिक स्रोत",
+        description: "ManVigor Plus आयुर्वेदिक जड़ी-बूटियों का बेहतरीन मिश्रण है जो शरीर में प्राकृतिक रूप से ऊर्जा, शक्ति और स्टैमिना बढ़ाता है।",
+        features: ["100% Ayurvedic", "Safe for Daily Use", "Natural Stamina Booster"],
+        solutionImage: "/images/generated/manvigor-solution.png"
+      },
+      mechanismSection: {
+        title: "यह कैसे काम करता है?",
+        steps: [
+          { title: "Boosts Immunity", description: "रोग प्रतिरोधक क्षमता बढ़ाता है।", icon: "shield" },
+          { title: "Reduces Stress", description: "तनाव और एंग्जायटी को कम करता है।", icon: "wind" },
+          { title: "Enhances Vitality", description: "शारीरिक और मानसिक ऊर्जा प्रदान करता है।", icon: "activity" },
+          { title: "Improves Digestion", description: "पाचन सुधरता है जिससे शरीर को पूरा पोषण मिलता है।", icon: "droplet" }
+        ]
+      },
+      ingredientsSection: {
+        title: "आयुर्वेदिक घटक",
+        ingredients: []
+      },
+      comparisonSection: {
+        title: "ManVigor Plus vs Energy Drinks",
+        modernTreatment: {
+          title: "Energy Drinks/Pills",
+          points: [
+            { label: "Sugar Content", value: "High sugar and caffeine" },
+            { label: "Results", value: "Short term energy crash" },
+            { label: "Side Effects", value: "Possible jitters/insomnia" }
+          ]
+        },
+        ourProduct: {
+          title: "ManVigor Plus",
+          points: [
+            { label: "Sugar Content", value: "No sugar or artificial stimulants" },
+            { label: "Results", value: "Long lasting vitality" },
+            { label: "Side Effects", value: "100% Safe and Natural" }
+          ]
+        }
+      },
+      usageSection: {
+        title: "सेवन विधि",
+        steps: [
+          { title: "खुराक", description: "1-2 कैप्सूल", note: "Dose" },
+          { title: "समय", description: "दिन में दो बार", note: "Frequency" },
+          { title: "कैसे लें", description: "दूध या गुनगुने पानी के साथ", note: "Instruction" }
+        ]
+      },
+      principlesSection: {
+        title: "स्वस्थ शरीर का आधार",
+        description: "आयुर्वेद के अनुसार, ओजस (Vitality) ही जीवन का आधार है।",
+        problems: [
+          { title: "Ojas Depletion", description: "Lack of core energy", icon: "battery-low" },
+          { title: "Vata Imbalance", description: "Causes stress and anxiety", icon: "wind" }
+        ],
+        solutions: [
+          { title: "Rasayana", description: "Rejuvenates tissues", icon: "activity" },
+          { title: "Balancing Doshas", description: "Restores natural harmony", icon: "heart" }
+        ]
+      },
+      featuresSection: ["Natural Ingredients", "Clinically Tested", "Premium Quality"],
+      certifications: ["FSSAI Certified", "GMP Certified", "100% Herbal"],
+      testimonials: [
+        { name: "Rahul Sharma", location: "Delhi", age: 34, rating: 5, content: "Great product for daily energy!" }
+      ],
+      faqs: [
+        { question: "Are there any side effects?", answer: "No, it is safe and natural." }
+      ]
+    }
+  },
+  {
+    id: "am-liv-ds-syrup",
+    name: "AM-Liv DS Syrup",
+    description: "Double strength liver support syrup.",
+    longDescription: "An advanced liver care syrup to support healthy liver function and improve metabolism.",
+    price: "₹150",
+    category: "Liver & Pitta Care",
+    ingredients: [],
+    benefits: ["Supports liver health", "Improves metabolism"],
+    usage: "Take as directed by your healthcare professional.",
+    image: amlivdsImg,
+    richContent: {
+      problemSection: {
+        title: "पाचन संबंधी समस्या और फैटी लिवर?",
+        description: "लिवर शरीर का मुख्य अंग है जो पाचन और मेटाबॉलिज्म के लिए बहुत जरूरी है। गलत खानपान लिवर को कमजोर कर सकता है।",
+        problems: [
+          { title: "Fatty Liver", description: "लिवर में फैट का जमा होना", icon: "alert-circle" },
+          { title: "Digestion Issues", description: "खाना ठीक से न पचना", icon: "activity" },
+          { title: "Loss of Appetite", description: "भूख न लगना", icon: "frown" },
+          { title: "Sluggish Metabolism", description: "वजन बढ़ना और सुस्ती", icon: "battery-low" }
+        ],
+        problemImage: "/images/generated/amliv-problem.png"
+      },
+      solutionSection: {
+        title: "AM-Liv DS Syrup",
+        subTitle: "Double Strength Liver Care",
+        description: "AM-Liv DS शक्तिशाली जड़ी-बूटियों का सिरप है जो लिवर को डिटॉक्स करने और उसकी कार्यक्षमता को सुधारने में मदद करता है।",
+        features: ["Double Strength Formula", "Liver Detox", "Enhances Digestion"],
+        solutionImage: "/images/generated/amliv-solution.png"
+      },
+      mechanismSection: {
+        title: "कैसे काम करता है?",
+        steps: [
+          { title: "Detoxifies Liver", description: "शरीर से विषैले पदार्थों को निकालता है।", icon: "droplet" },
+          { title: "Improves Enzymes", description: "लिवर एंजाइम को संतुलित करता है।", icon: "activity" },
+          { title: "Boosts Immunity", description: "रक्त साफ़ करता है।", icon: "shield" },
+          { title: "Improves Digestion", description: "भूख और पाचन को प्राकृतिक रूप से बढ़ाता है।", icon: "heart" }
+        ]
+      },
+      ingredientsSection: {
+        title: "आयुर्वेदिक घटक",
+        ingredients: []
+      },
+      comparisonSection: {
+        title: "Regular Syrups vs AM-Liv DS",
+        modernTreatment: {
+          title: "Regular Syrups",
+          points: [
+            { label: "Potency", value: "Standard Strength" },
+            { label: "Chemicals", value: "May contain synthetic additives" }
+          ]
+        },
+        ourProduct: {
+          title: "AM-Liv DS",
+          points: [
+            { label: "Potency", value: "Double Strength (DS) Extract" },
+            { label: "Chemicals", value: "100% Herbal Formula" }
+          ]
+        }
+      },
+      usageSection: {
+        title: "सेवन विधि",
+        steps: [
+          { title: "खुराक", description: "2 चम्मच (10ml)", note: "Dose" },
+          { title: "समय", description: "दिन में 2 से 3 बार", note: "Frequency" },
+          { title: "कैसे लें", description: "खाना खाने से पहले या बाद में", note: "Instruction" }
+        ]
+      },
+      principlesSection: {
+        title: "आयुर्वेदिक दृष्टिकोण",
+        description: "लिवर (यकृत) पित्त का मुख्य स्थान है।",
+        problems: [
+          { title: "Pitta Imbalance", description: "Excess heat causing liver issues", icon: "flame" }
+        ],
+        solutions: [
+          { title: "Detoxification", description: "Purifies toxins (Ama)", icon: "droplet" }
+        ]
+      },
+      featuresSection: ["Doctor Recommended", "No added artificial sugar", "Fast Acting"],
+      certifications: ["GMP Certified", "Ayush Approved"],
+      testimonials: [
+        { name: "Suresh Gupta", location: "Pune", age: 45, rating: 5, content: "Excellent results for my digestion." }
+      ],
+      faqs: [
+        { question: "Is it safe for diabetics?", answer: "Please consult your doctor." }
+      ]
+    }
+  },
+  {
+    id: "leucare-plus",
+    name: "Leucare Plus",
+    description: "Advanced support for women's health and wellness.",
+    longDescription: "A specialized formulation to support women's health, vitality, and well-being.",
+    price: "₹799",
+    category: "Women's Health",
+    ingredients: [],
+    benefits: ["Promotes women's health", "Supports vitality"],
+    usage: "Take as directed by your healthcare professional.",
+    image: leucareImg,
+    richContent: {
+      problemSection: {
+        title: "महिलाओं की अंदरूनी समस्याएं?",
+        description: "महिलाओं में कमजोरी, अनियमितता और ल्यूकोरिया जैसी समस्याएं स्वास्थ्य और जीवन की गुणवत्ता को प्रभावित करती हैं।",
+        problems: [
+          { title: "Leucorrhea", description: "सफेद पानी की समस्या", icon: "droplet" },
+          { title: "Weakness", description: "शारीरिक थकान और कमर दर्द", icon: "battery-low" },
+          { title: "Irregularities", description: "अनियमित चक्र", icon: "activity" },
+          { title: "Stress", description: "चिड़चिड़ापन", icon: "frown" }
+        ],
+        problemImage: "/images/generated/leucare-problem.png"
+      },
+      solutionSection: {
+        title: "Leucare Plus",
+        subTitle: "महिलाओं के संपूर्ण स्वास्थ्य का रक्षक",
+        description: "Leucare Plus आयुर्वेदिक औषधियों का सुरक्षित मिश्रण है जो महिलाओं की समस्याओं को जड़ से खत्म करने में मदद करता है।",
+        features: ["100% Safe Herbs", "Holistic Wellness", "Balances Hormones"],
+        solutionImage: "/images/generated/leucare-solution.png"
+      },
+      mechanismSection: {
+        title: "Leucare Plus कैसे काम करता है?",
+        steps: [
+          { title: "Hormonal Balance", description: "हार्मोनल असंतुलन को ठीक करता है।", icon: "activity" },
+          { title: "Strengthens Body", description: "कमर दर्द और कमजोरी में आराम देता है।", icon: "shield" },
+          { title: "Clears Toxins", description: "इंफेक्शन से बचाता है।", icon: "droplet" },
+          { title: "Restores Health", description: "नियमितता लाता है और ऊर्जा देता है।", icon: "heart" }
+        ]
+      },
+      ingredientsSection: {
+        title: "आयुर्वेदिक घटक",
+        ingredients: []
+      },
+      comparisonSection: {
+        title: "Temporary Solutions vs Leucare Plus",
+        modernTreatment: {
+          title: "Temporary Solutions",
+          points: [
+            { label: "Approach", value: "Symptom suppression" },
+            { label: "Side Effects", value: "Can disturb stomach" }
+          ]
+        },
+        ourProduct: {
+          title: "Leucare Plus",
+          points: [
+            { label: "Approach", value: "Root cause treatment" },
+            { label: "Side Effects", value: "Zero side effects" }
+          ]
+        }
+      },
+      usageSection: {
+        title: "सेवन विधि",
+        steps: [
+          { title: "खुराक", description: "1-2 कैप्सूल", note: "Dose" },
+          { title: "समय", description: "दिन में दो बार", note: "Frequency" },
+          { title: "कैसे लें", description: "पानी के साथ", note: "Instruction" }
+        ]
+      },
+      principlesSection: {
+        title: "मातृ और स्त्री स्वास्थ्य",
+        description: "आयुर्वेद के अनुसार महिलाओं का स्वास्थ्य उनके समग्र संतुलन पर निर्भर करता है।",
+        problems: [
+          { title: "Dosha Imbalance", description: "Vata & Pitta imbalance", icon: "activity" }
+        ],
+        solutions: [
+          { title: "Rasayana", description: "Rejuvenating herbs for reproductive system", icon: "heart" }
+        ]
+      },
+      featuresSection: ["Natural Recovery", "Gynecologist Recommended", "Safe for daily use"],
+      certifications: ["FSSAI Certified", "GMP Approved"],
+      testimonials: [
+        { name: "Priya Singh", location: "Jaipur", age: 29, rating: 5, content: "Bahut achha product hai, back pain aur weakness me aaram mila." }
+      ],
+      faqs: [
+        { question: "How long should I take it?", answer: "Usually recommended for 2-3 months for lasting results." }
+      ]
+    }
   }
 ];
 
@@ -824,5 +1095,7 @@ export const categories = [
   "Digestive",
   "Kidney Care",
   "Liver & Pitta Care",
-  "Combos"
+  "Combos",
+  "Wellness",
+  "Women's Health"
 ];

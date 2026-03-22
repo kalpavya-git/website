@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      value: "123 Wellness Lane, Rishikesh, Uttarakhand 249201",
+      value: "A Block, Pocket - A, Sector -12, Noida -201301",
       href: "https://maps.google.com",
     },
     {

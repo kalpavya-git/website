@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2 mr-8">
             <img src={logo} alt="Kalpavya" className="h-12 w-auto" />
             <span className="font-display text-xl font-bold text-black tracking-wide hidden sm:block">
-              Kalpavya
+              
             </span>
           </Link>
 

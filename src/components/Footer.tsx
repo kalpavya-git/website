@@ -71,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-3 font-sans text-sm">
               <li className="flex items-center gap-3 opacity-80">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>123 Wellness Lane, Rishikesh, Uttarakhand 249201</span>
+                <span>A Block, Pocket - A, Sector -12, Noida -201301</span>
               </li>
               <li className="flex items-center gap-3 opacity-80">
                 <Phone className="h-4 w-4 flex-shrink-0" />
