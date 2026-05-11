@@ -28,7 +28,7 @@ const Contact = () => {
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nMessage: ${formData.message}`
     );
 
-    window.open(`https://wa.me/919211895324?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/918929290209?text=${encodedText}`, '_blank');
 
     toast({
       title: "Opening WhatsApp",
@@ -50,8 +50,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91-9211895324",
-      href: "tel:+919211895324",
+      value: "+91-8929290209",
+      href: "tel:+918929290209",
     },
     {
       icon: Mail,
