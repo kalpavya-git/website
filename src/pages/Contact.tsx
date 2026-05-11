@@ -211,7 +211,7 @@ const Contact = () => {
                 </p>
                 <Button asChild className="font-sans w-full sm:w-auto">
                   <a
-                    href="https://wa.me/919211895324"
+                    href="https://wa.me/918929290209"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
