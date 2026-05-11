@@ -21,7 +21,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const text = `Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone || 'Not provided'}%0AMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/919211895324?text=${text}`; // Encoding happens via browser, but manual encoding is safer for complex chars, let's use encodeURIComponent for fields if needed, but simple template string usually works. To be safe, let's use encodeURIComponent.
+    const whatsappUrl = `https://wa.me/918929290209?text=${text}`; // Encoding happens via browser, but manual encoding is safer for complex chars, let's use encodeURIComponent for fields if needed, but simple template string usually works. To be safe, let's use encodeURIComponent.
 
     // Better implementation with encodeURIComponent
     const encodedText = encodeURIComponent(
