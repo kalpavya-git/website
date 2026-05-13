@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
           <p className="font-sans text-sm opacity-60">
             © {new Date().getFullYear()} Kalpavya Ayurveda. All rights reserved. |
-            Built by the folks at <a href="https://returnzero.space" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">returnzero.space</a>
+            Built by the folks at <a href="https://kalpavyaayurveda.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">returnzero.space</a>
           </p>
         </div>
       </div>
