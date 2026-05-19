@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      value: "A Block, Pocket - A, Sector -12, Noida -201301",
+      value: "A Block, Pocket - A, Sector -4, Noida -201301",
       href: "https://maps.google.com",
     },
     {
